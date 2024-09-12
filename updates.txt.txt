@@ -1,6 +1,10 @@
 Chase Sunstrom - 9/12/2024
 - Moved definition of bank account into a source file 
 - Added header guards
-- Removed "using namespace std" 
+- Removed "using namespace std" (bad practice)
 - Added type aliases
 - Changed exceptions to asserts (which cleaned up the code and is better practice)
+- Changed member variables to use m_ (which is best practice)
+- Cleaned up code
+- Added  = default for default destructors and constructors
+- Added everything to Bank namespace
