@@ -1,0 +1,6 @@
+Chase Sunstrom - 9/12/2024
+- Moved definition of bank account into a source file 
+- Added header guards
+- Removed "using namespace std" 
+- Added type aliases
+- Changed exceptions to asserts (which cleaned up the code and is better practice)
