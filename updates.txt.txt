@@ -15,3 +15,12 @@ Camden Kirkpatrick - 9/23/2024
 - The Display method in the Transaction class will display the info removed in the Withdraw and Deposit methods
 - Removed the need to call the Withdraw and Deposit methods directly using Account objects
 - The Withdraw and Deposit methods are called using an argument sent to the Transaction objects 
+
+Camden Kirkpatrick - 9/24/2024
+- Changed the Transaction constructor to use an initializer list
+- Changed the BankAccount pointer member variable in the Transaction class to a BankAccount reference
+- Changed the Transaction constructor to take a reference instead of a pointer
+- Removed the '&' in front of the checking_accout object, when it's being sent as an argument in main.cpp
+- Removed the assert in the Transaction constructor to check if the BankAccount pointer is null (changed to a reference)
+- Removed the -> notation used in the Execute method, and changed to dot notation
+- Changed the Execute method in the Transaction class to be private (only accessed by the constructor)
