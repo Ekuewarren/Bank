@@ -8,3 +8,10 @@ Chase Sunstrom - 9/12/2024
 - Cleaned up code
 - Added  = default for default destructors and constructors
 - Added everything to Bank namespace
+
+Camden Kirkpatrick - 9/23/2024
+- Added the Transaction class
+- Removed the message in the Withdraw and Deposit methods in the BankAccount class
+- The Display method in the Transaction class will display the info removed in the Withdraw and Deposit methods
+- Removed the need to call the Withdraw and Deposit methods directly using Account objects
+- The Withdraw and Deposit methods are called using an argument sent to the Transaction objects 
