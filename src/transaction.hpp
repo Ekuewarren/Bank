@@ -15,7 +15,7 @@ namespace Bank
 
     public:
         Transaction() = default;
-        Transaction(i32 transaction_id, BankAccount *account, f64 amount, const std::string &transaction_type);
+        Transaction(i32 transaction_id, BankAccount& account, f64 amount, const std::string &transaction_type);
 
         void Display() const;
     };
