@@ -37,7 +37,7 @@ namespace Bank
         std::cout << "Transaction Amount: $" << m_amount << std::endl;
 
         // display the account balance
-        m_account->ViewBalance();
+        m_account.ViewBalance();
     }
 
 }
