@@ -5,17 +5,12 @@
 
 namespace Bank
 {
-    Transaction::Transaction(i32 transaction_id, BankAccount *account, f64 amount, const std::string &transaction_type)
+        Transaction::Transaction(i32 transaction_id, BankAccount& account, f64 amount, const std::string &transaction_type)
+        : m_transaction_id(transaction_id), m_account(account), m_amount(amount), m_transaction_type(transaction_type)
     {
-        m_transaction_id = transaction_id;
-        m_account = account;
-        m_amount = amount;
-        m_transaction_type = transaction_type;
-
-        // make sure the account is not null, the amount is greater than 0, and the transaction type is valid
-        assert(m_account != nullptr && "Account cannot be null");
+        // make sure the amount is greater than 0 and the transaction type is valid
         assert(m_amount > 0 && "Amount must be greater than 0");
-        assert(m_transaction_type == "Withdraw" || m_transaction_type == "Deposit" && "Invalid account type");
+        assert((m_transaction_type == "Withdraw" || m_transaction_type == "Deposit") && "Invalid transaction type");
 
         // execute the transaction when the transaction object is created
         Execute();
@@ -26,11 +21,11 @@ namespace Bank
     {
         if (m_transaction_type == "Deposit")
         {
-            m_account->Deposit(m_amount);
+            m_account.Deposit(m_amount);
         }
         else if (m_transaction_type == "Withdraw")
         {
-            m_account->Withdraw(m_amount);
+            m_account.Withdraw(m_amount);
         }
     }
 
