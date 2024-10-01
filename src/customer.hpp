@@ -4,31 +4,31 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
+#include "types.hpp"
 
 namespace Bank {
 
 class Customer {
 public:
-    Customer(int id, const string& name)
+    Customer(i32 id, const std::string& name)
         : customer_id(id), customer_name(name) {}
 
-    int GetCustomerId() const {
+    i32 GetCustomerId() const {
         return customer_id;
     }
 
-    string GetCustomerName() const {
+    std::string GetCustomerName() const {
         return customer_name;
     }
 
     void DisplayCustomerInfo() const {
-        cout << "Customer ID: " << customer_id << endl;
-        cout << "Customer Name: " << customer_name << endl;
+        std::cout << "Customer ID: " << customer_id << std::endl;
+        std::cout << "Customer Name: " << customer_name << std::endl;
     }
 
 private:
-    int customer_id;
-    string customer_name;
+    i32 customer_id;
+    std::string customer_name;
 };
 
 } 
