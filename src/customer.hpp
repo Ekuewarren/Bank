@@ -11,24 +11,24 @@ namespace Bank {
 class Customer {
 public:
     Customer(i32 id, const std::string& name)
-        : customer_id(id), customer_name(name) {}
+        : m_customer_id(id), m_customer_name(name) {}
 
     i32 GetCustomerId() const {
-        return customer_id;
+        return m_customer_id;
     }
 
     std::string GetCustomerName() const {
-        return customer_name;
+        return m_customer_name;
     }
 
     void DisplayCustomerInfo() const {
-        std::cout << "Customer ID: " << customer_id << std::endl;
-        std::cout << "Customer Name: " << customer_name << std::endl;
+        std::cout << "Customer ID: " << m_customer_id << std::endl;
+        std::cout << "Customer Name: " << m_customer_name << std::endl;
     }
 
 private:
-    i32 customer_id;
-    std::string customer_name;
+    i32 m_customer_id;
+    std::string m_customer_name;
 };
 
 } 
