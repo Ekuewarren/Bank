@@ -20,6 +20,7 @@ namespace Bank
     {
         if (amount <= 0)
             assert(false && "Invalid amount");
+        
 
         m_balance += amount;
     }
